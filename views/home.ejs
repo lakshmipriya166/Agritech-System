@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Leafage</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <img class="logo" src="images/Logo.png">
+      </div>
+      <span class="fa fa-bars menu-icon"></span>
+
+      <div class="header-right">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#agriinfo">Agri Info</a>
+        <a href="#features">Testimonials</a>
+      </div>
+    </div>
+  </header>
+
+  <% console.log("hi") %>
+  <p><a href="/run">Run python</a></p>
+
+  <div class="top-wrapper">
+    <div class="container">
+      <h1>REVOLUTIONIZING AGRI TECH.</h1>
+      <h1>THE FUTURE OF FRESH PRODUCE.</h1>
+      <h3>Driven by cutting edge technology, we aid farmers maximize their profits.</h3>
+      <div id="services" class="btn-wrapper">
+        <br>
+        <form action="/buy" method="get">
+          <input type="submit" class="btn btn-dark" value="BUY" />
+        </form>
+        <br><br>
+        <form action="/sell" method="get">
+          <input type="submit" class="btn btn-dark" value="SELL" />
+        </form>
+        <br><br>
+        <form action="/register" method="get">
+          <input type="submit" class="btn btn-dark" value="REGISTER" />
+        </form>
+        <br><br>
+        <form action="/maps" method="get">
+          <input type="submit" class="btn btn-dark" value="ACTIVATE SMART SELLING" />
+        </form>
+        <br><br>
+        <form action="/login" method="get">
+          <input type="submit" class="btn btn-dark" value="AVAIL SERVICES" />
+        </form>
+        <br><br>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="lesson-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>Creating opportunities for everyone!</h2>
+      </div>
+      <div class="lessons">
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="https://prog-8.com/images/html/advanced/html.png">
+            <p>Farmer Benefits</p>
+          </div>
+          <p class="text-contents">Self reliance from seed to sale and elimination of middlemen thereby increasing profit</p>
+        </div>
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
+            <p>Retailer Convenience</p>
+          </div>
+          <p class="text-contents">Retailers can also benefit by buying fresh produce</p>
+        </div>
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="https://prog-8.com/images/html/advanced/ruby.png">
+            <p>Consumer Savings</p>
+          </div>
+          <p class="text-contents">As the consumers buy directly from the farmers, the prices are relatively cheaper</p>
+        </div>
+        <div class="lesson">
+          <div class="lesson-icon">
+            <img src="https://prog-8.com/images/html/advanced/php.png">
+            <p>Leafage System</p>
+          </div>
+          <p class="text-contents">Product of digitalization which links producers and consumers directly</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="message-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>Start your journey with Leafage</h2>
+        <h3>Let's grow together!</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+
+  <section class="white-section" id="features">
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-check-circle fa-4x"></i>
+          <h3 class="feature-title">Experience</h3>
+          <p>We understand the exact needs of our clients</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-bullseye fa-4x"></i>
+          <h3 class="feature-title">Focus</h3>
+          <p>We are precise in each and every detail</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-4x"></i>
+          <h3 class="feature-title">Passion</h3>
+          <p>Every event is our passion to create exception and uniqueness</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials" class="colored-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#testimonial-carousel" data-slide-to="1"></li>
+        <li data-target="#testimonial-carousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h4 class="testimonial-text">"Able to get fresh produce at reasonable cost directly from farmer."</h4>
+          <img class="testimonial-image" src="images/girl.png" alt="girl-profile">
+          <em>Devi, Chennai</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h4 class="testimonial-text">"Smart buying and selling feature is a highlight."</h4>
+          <img class="testimonial-image" src="images/businesswoman.png" alt="woman-profile">
+          <em>Priya, Delhi</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h4 class="testimonial-text">"An all-in-one app which makes farmers self reliant from seed to sale."</h4>
+          <img class="testimonial-image" src="images/businessman.png" alt="man-profile">
+          <em>Shiva, Mumbai</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Agri Info -->
+  <section class="white-section" id="agriinfo">
+
+    <h2 class="section-heading">Agri Info</h2>
+
+    <div class="row">
+
+      <div class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/1.jpg">
+            <h4>Agriculture</h4>
+            <form action="https://agritech.tnau.ac.in/agriculture/agri_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/2.jpg">
+            <h4>Horticulture</h4>
+            <form action="https://agritech.tnau.ac.in/horticulture/horti_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/3.jpg">
+            <h4>Agrl. Marketing</h4>
+            <form action="https://agritech.tnau.ac.in/agricultural_marketing/agrimark_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/4.jpg">
+            <h4>Agrl. Engineering</h4>
+            <form action="https://agritech.tnau.ac.in/agricultural_engineering/agriengg_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin: 20px 0px" class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/5.jpg">
+            <h4>Seed</h4>
+            <form action="https://agritech.tnau.ac.in/seed_certification/seedtech_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin: 20px 0px" class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/6.jpg">
+            <h4>Organic Farming</h4>
+            <form action="https://agritech.tnau.ac.in/org_farm/orgfarm_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin: 20px 0px" class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/7.jpg">
+            <h4>Sericulture</h4>
+            <form action="https://agritech.tnau.ac.in/sericulture/seri_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin: 20px 0px" class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/8.jpg">
+            <h4>Forestry</h4>
+            <form action="https://agritech.tnau.ac.in/forestry/forest_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-3 col-md-6">
+      </div>
+      <div class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/9.jpg">
+            <h4>Fishery</h4>
+            <form action="https://agritech.tnau.ac.in/fishery/fish_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img class="service_img" src="images/10.jpg">
+            <h4>Animal Husbandry</h4>
+            <form action="https://agritech.tnau.ac.in/animal_husbandry/animhus_index.html" method="post">
+              <input type="submit" class="btn btn-info" value="Know more" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services -->
+  <!--section class="white-section" id="services" style="text-align: center;">
+
+    <h2 class="section-heading">Services</h2><br><br>
+
+    <div class="row">
+
+      <div class="pricing-column col-lg-4 col-md-6">
+            <img class="service_img" src="images/Logo.png" alt="service1">
+            <br><br>
+            <h4>Smart buying<br>&<br>Smart selling</h4>
+            <br><br>
+            <form action="/" method="get">
+              <input type="submit" class="btn btn-info" value="Avail Service" />
+              </form>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+            <img class="service_img" src="images/Logo.png" alt="service1">
+            <br><br>
+            <h4>Resource maintenance<br>&<br>Resource analytics</h4>
+            <br><br>
+            <form action="/resourcemgmt" method="get">
+              <input type="submit" class="btn btn-info" value="Avail Resource Management Service" />
+              </form>
+            <br><br>
+            <form action="/dash" method="get">
+              <input type="submit" class="btn btn-info" value="Avail Resource Analytics Service" />
+              </form>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+            <img class="service_img" src="images/Logo.png" alt="service1">
+            <br><br>
+            <h4>Discussion Forum</h4>
+            <br><br><br><br>
+            <form action="/forum" method="get">
+              <input type="submit" class="btn btn-info" value="Avail Service" />
+              </form>
+      </div>
+
+    </div>
+
+  </section-->
+  <br><br><br><br>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 2021 Leafage</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

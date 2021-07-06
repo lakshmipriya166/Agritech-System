@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css" integrity="sha512-sopmFEmRVsWt542K+yzH3FQ1KJfdosOJG+bGLs9ZJT07b/3gUxRA9ICuJg2JtoZ9WeknAUuwJ0ggnmrV1YL6kQ==" crossorigin="anonymous" />
+
+    <link type="text/css" rel="stylesheet" href="css/styles4.css" />
+
+    <title>View Contacts</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mr-auto" href="./index.html"
+          ><img src="images/Logo.PNG" height="30" width="41"
+          /></a
+        >
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html"
+                ><span class="fa fa-home fa-lg"></span> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><span class="fa fa-info fa-lg"></span> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                ><span class="fa fa-list fa-lg"></span> Tools</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contactus.html"
+                ><span class="fa fa-address-card fa-lg"></span> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="jumbotron">
+      <div class="container">
+        <div class="row row-header">
+          <div class="col-12 col-sm-8">
+            <h1>Contacts and Leads</h1>
+            <p>
+              Access all the contacts you have made so far and their associated details!
+            </p>
+          </div>
+          <div class="col-12 col-sm" align-self-center>
+            <img src="images/Logo.PNG" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row align-items-center">
+        <ol class="col-12 breadcrumb">
+          <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active">Tools</li>
+        </ol>
+        <div class="col-xs-12">
+          <h2>Executive Summary</h2>
+              <hr />
+        </div>
+      </div>
+
+      <div class="row row-content">
+          <div class="card col-xs-12 col-sm-12">
+            <h3 class="card-header bg-info text-white">Stats At a Glance</h3>
+            <div class="card-body">
+              <div class="table-responsive table-hover">
+                <table class="table table-sm">
+                  <caption>Contact Statistics</caption>
+                  <tbody>
+                    <tr>
+                      <th>Buyers</th>
+                      <td>40</td>
+                    </tr>
+                    <tr>
+                        <th>Retailers</th>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th>Wholesalers</th>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th>Supliers</th>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th>Employees</th>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th>Random</th>
+                        <td>40</td>
+                    </tr>
+                    <tr class="alert-info">
+                        <th>Total Contacts</th>
+                        <td>240</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row row-content">
+            <div class="col-12 col-sm-9">
+                <h2>Table of Contacts</h2>
+                <hr>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-sm table-bordered table-striped table-hover">
+                <caption>List of contacts</caption>
+                <thead class="thead-dark">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Email</th>
+                        <th>Type</th>
+                        <th>Telephone</th>
+                        <th>Mobile</th>
+                        <th>Company</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Pincode</th>
+                        <th>State</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <% contacts.forEach(function(contact){ %>
+                    <tr>
+                        <td><%=contact.firstName%></td>
+                        <td><%=contact.lastName%></td>
+                        <td><%=contact.dob.getDate() + "-" + (contact.dob.getMonth()+1) + "-" +contact.dob.getFullYear() %></td>
+                        <td><%=contact.email%></td>
+                        <td><%=contact.type%></td>
+                        <td><%=contact.telephone%></td>
+                        <td><%=contact.mobile%></td>
+                        <td><%=contact.company%></td>
+                        <td><%=contact.address%></td>
+                        <td><%=contact.city%></td>
+                        <td><%=contact.pincode%></td>
+                        <td><%=contact.state%></td>
+                        <td><%=contact.notes%></td>
+                    </tr>
+                  <% }) %>
+
+                </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-sm-3"></div>
+            </div>
+
+        <div class="row row-content">
+            <div class="col-12 col-sm-9">
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 offset-1 col-sm-2">
+              <h5>Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-7 col-sm-5">
+            </div>
+            <div class="col-12 col-sm-4 align-self-center">
+              <div class="text-center">
+                <a
+                  class="btn btn-social-icon btn-google"
+                  href="http://google.com/+"
+                  ><i class="fa fa-google-plus fa-lg"></i
+                ></a>
+                <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="
+                  ><i class="fa fa-facebook fa-lg"></i
+                ></a>
+                <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"
+                  ><i class="fa fa-linkedin fa-lg"></i
+                ></a>
+                <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"
+                  ><i class="fa fa-twitter fa-lg"></i
+                ></a>
+                <a class="btn btn-social-icon btn-google" href="http://youtube.com/"
+                  ><i class="fa fa-youtube fa-lg"></i
+                ></a>
+                <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              <p>© Copyright 2021 Leafage</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS.
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+
+<!--DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="jumbotron text-center">
+    <div class="container">
+      <i class="fas fa-address-book fa-6x"></i>
+      <h1 class="display-3">Contacts</h1>
+
+      <% contacts.forEach(function(contact){ %>
+      <p class="secret-text"><%=contact.firstName%></p>
+      <% }) %>
+
+
+
+      <hr>
+      <a class="btn btn-dark btn-lg" href="/resourcemgmt" role="button">Go Back</a>
+    </div>
+  </div>
+
+</body>
+
+</html-->

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SELL</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="text/javascript">
+    function status(){
+      alert("Item for sale added successfully!!");
+      return true;
+    }
+  </script>
+</head>
+
+<body class="page">
+
+  <div class="container">
+
+    <h1 style="font-size: 8rem; color: white;">SELL</h1>
+
+    <div class="row page">
+      <div class="col-sm-12" align="center">
+        <div class="card">
+          <div class="card-body">
+
+            <!-- Makes POST request to /book route -->
+            <form action="/sell" method="post" onsubmit="return status();" align="center" style="justify-content: center; align-items: center">
+              <br><br>
+              <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" name="id">
+              </div>
+              <br><br>
+              <div class="form-group">
+                <label for="mobile">Mobile number:</label>
+                <input type="number" name="mobile">
+              </div>
+              <br><br>
+              <div class="form-group">
+                <label>Item to sell:</label>
+                <input type="text" name="item">
+              </div>
+              <br><br>
+              <div class="form-group">
+                <label for="qty">Quantity for sale:</label>
+                <input type="number" name="qty">
+              </div>
+              <br><br>
+              <div class="form-group">
+                <label>Item expiry date:</label>
+                <input type="datetime-local" name="expdate">
+              </div>
+              <br><br>
+              <div class="form-group">
+                <label for="cost">Cost per kg:</label>
+                <input type="number" name="cost">
+              </div>
+              <br><br>
+              <button type="submit" class="btn btn-dark">SELL</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>

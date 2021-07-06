@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SALE</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="page">
+
+  <div class="container mt-5">
+
+    <h1 style="font-size: 6rem; color: white;"><img class="login_img" src="images/buy.PNG" alt="Buy image" />BUY</h1>
+
+    <div class="row page">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+
+            <h2>Product Search Result: </h2>
+            <% if(result.length > 0) { %>
+              <table>
+                <tr>
+                  <th>ID</th>
+                  <th>Item</th>
+                  <th>Quantity(kgs)</th>
+                  <th>Mobile</th>
+                  <th>Cost per kg</th>
+                  <th>Expiry date</th>
+                </tr>
+              <% result.forEach(function(item){ %>
+                  <tr>
+                    <td><%=item.id%></td>
+                    <td><%=item.item%></td>
+                    <td><%=item.qty%></td>
+                    <td><%=item.mobile%></td>
+                    <td><%=item.cost%></td>
+                    <td><%=item.expdate.getFullYear()+'/'+(item.expdate.getMonth()+1)+'/'+item.expdate.getDate() %></td>
+                  </tr>
+              <%  }) %>
+              </table>
+
+              <br><br>
+
+              <form action="/order" method="POST" onSubmit="alert('Your order has been placed successfully!!');">
+                <input type="hidden" name="userid" value="<%=userid%>">
+                <input type="hidden" name="item" value="<%=item%>">
+                <input type="hidden" name="quantity" value="<%=quantity%>">
+                <button type="submit" class="btn btn-dark">Place Order</button>
+              </form>
+
+            <%  } else { %>
+              <h3>Product is currently out of stock ☹☹</h3>
+            <%  } %>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>

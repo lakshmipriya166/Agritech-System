@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>SMART SELLING</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="page">
+
+  <div class="container mt-5">
+
+    <h1 style="font-size: 6rem; color: white;"><img class="login_img" src="images/buy.PNG" alt="Buy image" />ACTIVATE SMART SELLING</h1>
+
+    <div class="row page">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <form action="/smart" method="post" align="center" style="justify-content: center; align-items: center">
+              <br><br>
+              <!--div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" name="id">
+              </div-->
+
+              <div id="div1" style="display:none;">
+                <%=latitude%>
+              </div>
+              <div id="div2" style="display:none;">
+                <%=longitude%>
+              </div>
+
+              <input type="hidden" id="lat1" name="lat1">
+              <input type="hidden" id="long1" name="long1">
+
+              <br>
+              <button class= "btn btn-dark" type="button" onclick="showLoc();">
+                View Seller location
+              </button>
+              <button class= "btn btn-dark" type="submit">
+                See other seller options
+              </button>
+              <br><br><br>
+
+            </form>
+
+            <div id="demo2" align="center" style="margin: auto; width: 500px; height: 500px;">
+
+            </div>
+
+            <script src="https://maps.google.com/maps/api/js?sensor=false">
+
+            </script>
+            <script type="text/javascript">
+
+            function showLoc(){
+            var latt = document.getElementById("div1").innerHTML;
+            var long = document.getElementById("div2").innerHTML;
+
+            document.getElementById("lat1").value = latt;
+            document.getElementById("long1").value = long;
+
+            //alert("showLoc() called");
+            //alert(latt);
+            //alert(long);
+
+            var lattlong = new google.maps.LatLng(latt, long);
+            var OPTions = {
+            center: lattlong,
+            zoom: 10,
+            mapTypeControl: true,
+            navigationControlOptions: {style:google.maps.NavigationControlStyle.SMALL}
+            }
+            var mapg = new google.maps.Map(document.getElementById("demo2"), OPTions);
+            var markerg = new google.maps.Marker({position:lattlong, map:mapg, title:"You are here!"});
+            }
+
+            function errHand(err) {
+            switch(err.code) {
+            case err.PERMISSION_DENIED:
+            result.innerHTML = "The application doesn't have the permission" +
+              "to make use of location services"
+            break;
+            case err.POSITION_UNAVAILABLE:
+            result.innerHTML = "The location of the device is uncertain"
+            break;
+            case err.TIMEOUT:
+            result.innerHTML = "The request to get user location timed out"
+            break;
+            case err.UNKNOWN_ERROR:
+            result.innerHTML = "Time to fetch location information exceeded"+
+            "the maximum timeout interval"
+            break;
+            }
+            }
+            </script>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--form name="xyz" action="/maps" method="post">
+    <input type="hidden" name="" />
+    <script type="text/javascript">
+       var wait=setTimeout("document.xyz.submit();", 90000);
+    </script>
+  </form-->
+
+</body>
+
+</html>
